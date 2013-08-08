@@ -70,9 +70,6 @@ sudo aptitude install -y checkinstall
 # cURL
 sudo aptitude install -y curl
 
-# ctags - used for various awesome Vim plugins
-#sudo aptitude install -y exuberant-ctags
-
 # git
 sudo aptitude install -y git
 
@@ -97,7 +94,6 @@ sudo aptitude install -y weechat
 
 # zsh
 sudo aptitude install -y zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 chsh -s `which zsh`
 
 # Other binaries - into ~/bin
@@ -202,6 +198,23 @@ sudo pip install -U fabric
 sudo pip install -U virtualenv
 sudo pip install -U virtualenvwrapper
 
+# ruby - dependencies and rvm
+sudo aptitude install -y libreadline6-dev
+sudo aptitude install -y zlib1g-dev
+sudo aptitude install -y libssl-dev
+sudo aptitude install -y libyaml-dev
+sudo aptitude install -y libsqlite3-dev
+sudo aptitude install -y sqlite3
+sudo aptitude install -y autoconf
+sudo aptitude install -y libgdbm-dev
+sudo aptitude install -y libncurses5-dev
+sudo aptitude install -y automake
+sudo aptitude install -y libtool
+sudo aptitude install -y bison
+sudo aptitude install -y libffi-dev
+curl -L https://get.rvm.io | bash -s stable --ruby
+source ~/.rvm/scripts/rvm
+
 # heroku - toolbelt and accounts
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 heroku plugins:install git://github.com/ddollar/heroku-accounts.git
@@ -211,6 +224,10 @@ heroku plugins:install git://github.com/ddollar/heroku-accounts.git
 # dotfiles
 #
 fancy_echo "Setting up dotfiles"
+git clone ssh://git@github.com:niklasae/dotfiles ~/Code/dotfiles
+cd ~/Code/dotfiles
+./prereq.sh
+./setup.sh
 
 
 #
