@@ -273,6 +273,7 @@ echo
 echo "  * Install Chrome" 
 echo "  * Install Dropbox + run setup"
 echo "  * Install Spotify"
+echo "  * Install Vagrant"
 echo "  * Install Valentina Studio (VStudio) + import bookmarks"
 echo "  * Install Virtualbox"
 echo
