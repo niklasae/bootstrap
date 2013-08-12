@@ -67,6 +67,9 @@ sudo aptitude install -y ack-grep
 # http://blog.sanctum.geek.nz/packaging-built-software/
 sudo aptitude install -y checkinstall
 
+# at
+sudo aptitude install -y at
+
 # cURL
 sudo aptitude install -y curl
 
