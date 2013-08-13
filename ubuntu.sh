@@ -95,6 +95,9 @@ sudo aptitude install -y vim
 # weechat - IRC
 sudo aptitude install -y weechat
 
+# xclip - used with tmux copy/paste
+sudo aptitude install -y xclip
+
 # zsh
 sudo aptitude install -y zsh
 chsh -s `which zsh`
