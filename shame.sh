@@ -43,3 +43,12 @@ sudo rabbitmq-plugins enable rabbitmq_tracing && sudo rabbitmq-plugins enable ra
 
 # supervisor
 sudo aptitude install -y supervisor
+
+# django-skel
+sudo aptitude install -y libevent-dev
+sudo aptitude install -y libpq-dev 
+sudo aptitude install -y libmemcache-dev 
+sudo aptitude install -y zlib1g-dev 
+sudo aptitude install -y libssl-dev 
+sudo aptitude install -y python-dev
+sudo aptitude install -y build-essential
