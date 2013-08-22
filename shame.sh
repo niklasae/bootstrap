@@ -52,3 +52,9 @@ sudo aptitude install -y zlib1g-dev
 sudo aptitude install -y libssl-dev 
 sudo aptitude install -y python-dev
 sudo aptitude install -y build-essential
+
+# splinter
+sudo aptitude install -y build-essential
+sudo aptitude install -y python-dev
+sudo aptitude install -y libxml2-dev
+sudo aptitude install -y libxslt1-dev
