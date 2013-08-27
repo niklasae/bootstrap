@@ -199,10 +199,11 @@ sudo aptitdue install -y build-essential
 sudo aptitude install -y libevent-dev  # asynchronous IO
 wget -qO- http://python-distribute.org/distribute_setup.py | sudo python
 sudo easy_install pip
-sudo pip install -U autoenv
 sudo pip install -U fabric
 sudo pip install -U virtualenv
 sudo pip install -U virtualenvwrapper
+# python autoenv - installing using pip didn't work too well
+git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
 
 # ruby - dependencies and rvm
 sudo aptitude install -y libreadline6-dev
