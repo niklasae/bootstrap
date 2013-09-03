@@ -199,6 +199,7 @@ sudo aptitdue install -y build-essential
 sudo aptitude install -y libevent-dev  # asynchronous IO
 wget -qO- http://python-distribute.org/distribute_setup.py | sudo python
 sudo easy_install pip
+sudo pip install -U pip
 sudo pip install -U fabric
 sudo pip install -U virtualenv
 sudo pip install -U virtualenvwrapper
@@ -279,7 +280,6 @@ echo "Do not forget to:"
 echo
 echo "  * Install Chrome" 
 echo "  * Install Dropbox + run setup"
-echo "  * Install Spotify"
 echo "  * Install Vagrant"
 echo "  * Install Valentina Studio (VStudio) + import bookmarks"
 echo "  * Install Virtualbox"
