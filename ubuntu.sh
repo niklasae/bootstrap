@@ -280,6 +280,7 @@ echo "Do not forget to:"
 echo
 echo "  * Install Chrome" 
 echo "  * Install Dropbox + run setup"
+echo "  * Install IE (http://www.modern.ie/en-us/virtualization-tools)"
 echo "  * Install Vagrant"
 echo "  * Install Valentina Studio (VStudio) + import bookmarks"
 echo "  * Install Virtualbox"
