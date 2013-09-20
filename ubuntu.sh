@@ -63,6 +63,13 @@ fancy_echo "Installing CLI tools and utils"
 # ack-grep
 sudo aptitude install -y ack-grep
 
+# AWS RDS
+wget -qO ~/Software/RDSCli.zip http://s3.amazonaws.com/rds-downloads/RDSCli.zip
+unzip ~/Software/RDSCli.zip
+rdscli_version=$(ls ~/Software | grep -o 'RDSCli-[0-9\.]*')
+ln -s ~/Software/$rdscli_version ~/Software/RDSCli
+chmod +x ~/Software/RDSCli/bin/*
+
 # checkinstall - install nicely into /usr/local creates xyz.deb
 # http://asic-linux.com.mx/~izto/checkinstall/
 # http://blog.sanctum.geek.nz/packaging-built-software/
