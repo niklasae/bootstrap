@@ -52,6 +52,7 @@ mkdir -p ~/Code/projects
 sudo ln -s ~/Code/projects /projects
 mkdir -p ~/Code/work
 sudo ln -s ~/Code/work /work
+mkdir ~/Software
 
 
 #
