@@ -205,6 +205,8 @@ sudo aptitdue install -y python-gpgme
 sudo aptitude install -y python-pip
 sudo aptitdue install -y build-essential
 sudo aptitude install -y libevent-dev  # asynchronous IO
+sudo aptitude install -y libpq-dev  # PostgreSQL lib for ORM
+sudo aptitude install -y libmysqlclient-dev  # MySQL lib for ORM
 wget -qO- http://python-distribute.org/distribute_setup.py | sudo python
 sudo easy_install pip
 sudo pip install -U pip
