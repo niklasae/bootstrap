@@ -91,6 +91,9 @@ sudo aptitude install -y htop
 sudo aptitude install -y mutt
 sudo sh -c "echo niklas@jobylon.com > /root/.forward"  # root forward
 
+# nfs
+sudo aptitude install -y nfs-kernel-server nfs-common portmap
+
 # tmux
 sudo aptitude install -y tmux
 
