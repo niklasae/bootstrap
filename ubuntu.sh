@@ -26,6 +26,9 @@ fancy_select() {
 # Begin
 echo
 
+# Fail and stop on error
+set -e
+
 #
 # System packages and package manager (aptitude)
 #
@@ -86,6 +89,9 @@ sudo aptitude install -y git
 
 # htop
 sudo aptitude install -y htop
+
+# inotify
+sudo aptitude install -y inotify-tools
 
 # mutt - email
 sudo aptitude install -y mutt
