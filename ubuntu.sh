@@ -203,8 +203,10 @@ node_version=$(wget -qO- http://nodejs.org | grep "Current Version" | grep -o '[
 fancy_echo "Setting up node.js version (NVM) - "$node_version
 nvm install $node_version
 nvm alias default $node_version
+npm install -g bower
 npm install -g coffee-script
 npm install -g coffeelint
+npm install -g grunt-cli
 npm install -g jshint
 npm install -g less
 
