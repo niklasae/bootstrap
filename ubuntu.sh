@@ -100,6 +100,12 @@ sudo sh -c "echo niklas@jobylon.com > /root/.forward"  # root forward
 # nfs
 sudo aptitude install -y nfs-kernel-server nfs-common portmap
 
+# tmate
+sudo apt-get install -y python-software-properties
+sudo add-apt-repository ppa:nviennot/tmate
+sudo apt-get update
+sudo apt-get install -y tmate
+
 # tmux
 sudo aptitude install -y tmux
 
