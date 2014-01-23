@@ -215,6 +215,7 @@ npm install -g coffeelint
 npm install -g grunt-cli
 npm install -g jshint
 npm install -g less
+npm install -g phantomjs
 
 # python
 sudo aptitude install -y python-dev
