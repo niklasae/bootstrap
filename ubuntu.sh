@@ -306,9 +306,11 @@ done
 echo -e ${GREEN}
 echo "Do not forget to:"
 echo
-echo "  * Install Chrome" 
+echo "  * Install Chrome"
+echo "  * Install DbVisulizer (8?)"
 echo "  * Install Dropbox + run setup"
 echo "  * Install IE (http://www.modern.ie/en-us/virtualization-tools)"
+echo "  * Install redis-cli (http://redis.io/topics/quickstart)"
 echo "  * Install Vagrant"
 echo "  * Install Valentina Studio (VStudio) + import bookmarks"
 echo "  * Install Virtualbox"
@@ -318,5 +320,5 @@ echo "  * Configure Synapse"
 echo
 echo "  * Reboot to get ZSH working" 
 echo
-echo "Thanks for taking me for a spinn... :-)"
+echo "Thanks for taking me for a spin... :-)"
 echo -e ${CLEAR}
