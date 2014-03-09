@@ -213,6 +213,7 @@ npm install -g bower
 npm install -g coffee-script
 npm install -g coffeelint
 npm install -g grunt-cli
+npm install -g js2coffee
 npm install -g jshint
 npm install -g less
 npm install -g phantomjs
