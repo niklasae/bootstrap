@@ -216,7 +216,9 @@ npm install -g grunt-cli
 npm install -g js2coffee
 npm install -g jshint
 npm install -g less
+# npm:s for testing
 npm install -g phantomjs
+npm install -g casperjs
 
 # python
 sudo aptitude install -y python-dev
