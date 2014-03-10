@@ -51,10 +51,12 @@ sudo aptitude -y safe-upgrade
 #
 fancy_echo "Setting up directories"
 mkdir ~/bin
+mkdir -p ~/Code/contrib
 mkdir -p ~/Code/projects
 sudo ln -s ~/Code/projects /projects
 mkdir -p ~/Code/work
 sudo ln -s ~/Code/work /work
+mkdir -p ~/Code/tmp
 mkdir ~/Software
 
 
