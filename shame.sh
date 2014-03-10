@@ -58,3 +58,6 @@ sudo aptitude install -y build-essential
 sudo aptitude install -y python-dev
 sudo aptitude install -y libxml2-dev
 sudo aptitude install -y libxslt1-dev
+
+# XXX - if panel indicators are missing
+sudo aptitude install -y libindicator1
