@@ -30,34 +30,30 @@ echo
 set -e
 
 #
-# System packages and package manager (aptitude)
+# System packages and general update
 #
 fancy_echo "Check package manager..."
-if command -v aptitude >/dev/null; then
-    fancy_echo "Using aptitude..."
-else
-    fancy_echo "Installing aptitude..."
-    sudo apt-get update -y
-    sudo apt-get install -y aptitude
-fi
+sudo apt-get update
+
 fancy_echo "Update system packages..."
-sudo aptitude update
-# sudo aptitude -y dist-upgrade
-sudo aptitude -y safe-upgrade
+#sudo apt-get -y dist-upgrade
+sudo apt-get -y upgrade
 
 
 #
 # Setting up dirs
 #
 fancy_echo "Setting up directories"
-mkdir ~/bin
+mkdir -p ~/bin
 mkdir -p ~/Code/contrib
 mkdir -p ~/Code/projects
+sudo unlink /projects
 sudo ln -s ~/Code/projects /projects
 mkdir -p ~/Code/work
+sudo unlink /work
 sudo ln -s ~/Code/work /work
 mkdir -p ~/Code/tmp
-mkdir ~/Software
+mkdir -p ~/Software
 
 
 #
@@ -66,124 +62,66 @@ mkdir ~/Software
 fancy_echo "Installing CLI tools and utils"
 
 # ack-grep
-sudo aptitude install -y ack-grep
+sudo apt-get install -y ack-grep
 
 # AWS RDS
-wget -qO ~/Software/RDSCli.zip http://s3.amazonaws.com/rds-downloads/RDSCli.zip
-unzip ~/Software/RDSCli.zip
-rdscli_version=$(ls ~/Software | grep -o 'RDSCli-[0-9\.]*')
-ln -s ~/Software/$rdscli_version ~/Software/RDSCli
-chmod +x ~/Software/RDSCli/bin/*
+#wget -qO ~/Software/RDSCli.zip http://s3.amazonaws.com/rds-downloads/RDSCli.zip
+#unzip ~/Software/RDSCli.zip
+#rdscli_version=$(ls ~/Software | grep -o 'RDSCli-[0-9\.]*')
+#ln -s ~/Software/$rdscli_version ~/Software/RDSCli
+#chmod +x ~/Software/RDSCli/bin/*
 
 # checkinstall - install nicely into /usr/local creates xyz.deb
 # http://asic-linux.com.mx/~izto/checkinstall/
 # http://blog.sanctum.geek.nz/packaging-built-software/
-sudo aptitude install -y checkinstall
+sudo apt-get install -y checkinstall
 
 # at
-sudo aptitude install -y at
+sudo apt-get install -y at
 
 # cURL
-sudo aptitude install -y curl
+sudo apt-get install -y curl
 
 # git
-sudo aptitude install -y git
+sudo apt-get install -y git
 
 # htop
-sudo aptitude install -y htop
+sudo apt-get install -y htop
 
 # inotify
-sudo aptitude install -y inotify-tools
+sudo apt-get install -y inotify-tools
 
 # mutt - email
-sudo aptitude install -y mutt
+sudo apt-get install -y mutt
 sudo sh -c "echo niklas@jobylon.com > /root/.forward"  # root forward
 
 # nfs
-sudo aptitude install -y nfs-kernel-server nfs-common portmap
+sudo apt-get install -y nfs-kernel-server nfs-common portmap
 
 # tmate
 sudo apt-get install -y python-software-properties
-sudo add-apt-repository ppa:nviennot/tmate
+sudo add-apt-repository -y ppa:nviennot/tmate
 sudo apt-get update
 sudo apt-get install -y tmate
 
 # tmux
-sudo aptitude install -y tmux
+sudo apt-get install -y tmux
 
 # tree
-sudo aptitude install -y tree
+sudo apt-get install -y tree
 
 # vim
-sudo aptitude install -y vim
+sudo apt-get install -y vim
 
 # weechat - IRC
-sudo aptitude install -y weechat
+sudo apt-get install -y weechat
 
 # xclip - used with tmux copy/paste
-sudo aptitude install -y xclip
+sudo apt-get install -y xclip
 
 # zsh
-sudo aptitude install -y zsh
+sudo apt-get install -y zsh
 chsh -s `which zsh`
-
-# Other binaries - into ~/bin
-sudo aptitude install -y ffmpeg
-wget -qO ~/bin/svtget https://github.com/mmn/svtget/raw/master/bash/svtget
-sudo chmod +x ~/bin/svtget
-
-#
-# GUI tools and utils
-#
-fancy_echo "Installing GUI tools & utils"
-
-# calibre - ebook lib manager
-sudo aptitude install -y calibre
-
-# chromium
-sudo aptitude install -y chromium-browser
-
-# keepassx 
-sudo aptitude install -y keepassx
-
-# gimp
-sudo aptitude install -y gimp
-
-# git-gui
-sudo aptitude install -y git-gui
-
-# gSTM - manages ssh tunnels
-sudo aptitude install -y gstm
-
-# gVim
-sudo aptitude install -y vim-gtk
-
-# meld - file diff
-sudo aptitude install -y meld
-
-# mysql-workbench
-sudo aptitude install -y mysql-workbench
-
-# parcellite - clipboard manager
-sudo aptitude install -y parcellite
-
-# shutter - screenshot tool
-sudo aptitude install -y shutter
-
-# skype
-sudo aptitude install -y skype
-
-# spotify
-sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list'
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
-sudo aptitude update
-sudo aptitude install -y spotify-client
-
-# synapse - application launcher
-sudo aptitude install -y synapse
-
-# vlc
-sudo aptitude install -y vlc
 
 
 #
@@ -192,7 +130,7 @@ sudo aptitude install -y vlc
 fancy_echo "Setting up dev env"
 
 # gettext & language-packs - not quite sure it works...
-sudo aptitude install -y gettext
+sudo apt-get install -y gettext
 current_dir=$PWD 
 cd /usr/share/locales
 sudo /usr/share/locales/install-language-pack da_DK
@@ -223,13 +161,13 @@ npm install -g phantomjs
 npm install -g casperjs
 
 # python
-sudo aptitude install -y python-dev
-sudo aptitdue install -y python-gpgme
-sudo aptitude install -y python-pip
-sudo aptitdue install -y build-essential
-sudo aptitude install -y libevent-dev  # asynchronous IO
-sudo aptitude install -y libpq-dev  # PostgreSQL lib for ORM
-sudo aptitude install -y libmysqlclient-dev  # MySQL lib for ORM
+sudo apt-get install -y python-dev
+sudo apt-get install -y python-gpgme
+sudo apt-get install -y python-pip
+sudo apt-get install -y build-essential
+sudo apt-get install -y libevent-dev  # asynchronous IO
+sudo apt-get install -y libpq-dev  # PostgreSQL lib for ORM
+sudo apt-get install -y libmysqlclient-dev  # MySQL lib for ORM
 wget -qO- http://python-distribute.org/distribute_setup.py | sudo python
 sudo easy_install pip
 sudo pip install -U pip
@@ -240,21 +178,22 @@ sudo pip install -U virtualenvwrapper
 git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
 
 # ruby - dependencies and rvm
-sudo aptitude install -y libreadline6-dev
-sudo aptitude install -y zlib1g-dev
-sudo aptitude install -y libssl-dev
-sudo aptitude install -y libyaml-dev
-sudo aptitude install -y libsqlite3-dev
-sudo aptitude install -y sqlite3
-sudo aptitude install -y autoconf
-sudo aptitude install -y libgdbm-dev
-sudo aptitude install -y libncurses5-dev
-sudo aptitude install -y automake
-sudo aptitude install -y libtool
-sudo aptitude install -y bison
-sudo aptitude install -y libffi-dev
+sudo apt-get install -y libreadline6-dev
+sudo apt-get install -y zlib1g-dev
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y libyaml-dev
+sudo apt-get install -y libsqlite3-dev
+sudo apt-get install -y sqlite3
+sudo apt-get install -y autoconf
+sudo apt-get install -y libgdbm-dev
+sudo apt-get install -y libncurses5-dev
+sudo apt-get install -y automake
+sudo apt-get install -y libtool
+sudo apt-get install -y bison
+sudo apt-get install -y libffi-dev
 curl -L https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm
+
 
 # heroku - toolbelt and accounts
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
@@ -262,67 +201,18 @@ heroku plugins:install git://github.com/ddollar/heroku-accounts.git
 
 
 #
-# dotfiles
+# Clean up
 #
-fancy_echo "Setting up dotfiles"
-git clone ssh://git@github.com:niklasae/dotfiles ~/Code/dotfiles
-cd ~/Code/dotfiles
-./prereq.sh
-./setup.sh
+fancy_echo "Cleaning up packages"
+sudo apt-get autoremove -y
 
-
-#
-# UI specific settings
-#
-fancy_select "Which UI is in use?"
-select ui in Cinnamon Other
-do
-    case $ui in
-        Cinnamon)
-            fancy_echo "Cinnamon specific settings it is!"
-            #sudo aptitude install -y gsettings
-
-            # Default workspaces, get back Super and no hot corners
-            # Find more to set using `$ gsettings list-recursively | grep xyz`
-            gsettings set org.cinnamon number-workspaces 4
-            gsettings set org.cinnamon.muffin overlay-key 'Super_R'
-            gsettings set org.cinnamon overview-corner "['false:false:false', 'false:false:false', 'false:false:false', 'false:false:false']"
-
-            # Keybindings - switch, move, lock...
-            gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control><Super>Down']"
-            gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Super>Left']"
-            gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Super>Right']"
-            gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control><Super>Up']"
-            gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Control><Shift><Super>Down']"
-            gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Control><Shift><Super>Left']"
-            gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Control><Shift><Super>Right']"
-            gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Control><Shift><Super>Up']"
-            gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver '<Control><Super>l'
-
-            break;;
-
-        Other)
-            fancy_echo "No further UI setup..."
-            break;;
-    esac
-done
 
 # End
 echo -e ${GREEN}
 echo "Do not forget to:"
 echo
-echo "  * Install Chrome"
-echo "  * Install DbVisulizer (8?)"
-echo "  * Install Dropbox + run setup"
-echo "  * Install IE (http://www.modern.ie/en-us/virtualization-tools)"
-echo "  * Install redis-cli (http://redis.io/topics/quickstart)"
-echo "  * Install Vagrant"
-echo "  * Install Valentina Studio (VStudio) + import bookmarks"
-echo "  * Install Virtualbox"
-echo
-echo "  * Configure Parcellite"
-echo "  * Configure Synapse"
-echo
+echo "  * Check the README file for software that needs to be installed manually"
+echo "  * Install the dotfiles"
 echo "  * Reboot to get ZSH working" 
 echo
 echo "Thanks for taking me for a spin... :-)"
