@@ -7,8 +7,8 @@ Install and setup scripts for my boxes
 
 	# Generate the key
 	$ ssh-keygen -t rsa
-	$ openssl pkcs8 -topk8 -v2 des3 -in id_rsa.old -out id_rsa_enc
-	$ rm id_rsa
+	$ openssl pkcs8 -topk8 -v2 des3 -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa_enc
+	$ rm ~/.ssh/id_rsa
 	$ mkdir ~/.ssh/pub
 	$ mv ~/.ssh/id_rsa.pub ~/.ssh/pub/.
 	$ chmod 600 ~/.ssh/id_rsa_enc
