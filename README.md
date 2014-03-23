@@ -9,7 +9,7 @@ Install and setup scripts for my boxes
 	$ ssh-keygen -t rsa
 	$ openssl pkcs8 -topk8 -v2 des3 -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa_enc
 	$ rm ~/.ssh/id_rsa
-	$ mkdir ~/.ssh/pub
+	$ mkdir -p ~/.ssh/pub
 	$ mv ~/.ssh/id_rsa.pub ~/.ssh/pub/.
 	$ chmod 600 ~/.ssh/id_rsa_enc
 	$ ssh-add ~/.ssh/id_rsa_enc
