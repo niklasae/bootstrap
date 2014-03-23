@@ -15,7 +15,7 @@ Install and setup scripts for my boxes
 	$ ssh-add ~/.ssh/id_rsa_enc
 
 	# Put on sites
-	$ sudo apt-get xclip
+	$ sudo apt-get install -y xclip
 	$ xclip -sel clip < ~/.ssh/pub/id_rsa.pub
 
 	# Test
