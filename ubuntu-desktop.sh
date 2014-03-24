@@ -79,8 +79,9 @@ sudo apt-get install -y meld
 # mysql-workbench
 sudo apt-get install -y mysql-workbench
 
-# parcellite - clipboard manager
-sudo apt-get install -y parcellite
+# clipit or parcellite - clipboard manager
+sudo apt-get install -y clipit
+#sudo apt-get install -y parcellite
 
 # shutter - screenshot tool
 sudo apt-get install -y shutter
