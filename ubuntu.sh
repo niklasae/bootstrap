@@ -45,13 +45,12 @@ sudo apt-get -y upgrade
 #
 fancy_echo "Setting up directories"
 mkdir -p ~/bin
+mkdir -p ~/tmp && sudo chown niklas:niklas ~/tmp
 mkdir -p ~/Code/contrib
 mkdir -p ~/Code/projects
-sudo unlink /projects
-sudo ln -s ~/Code/projects /projects
+test -d /projects || sudo ln -s ~/Code/projects /projects
 mkdir -p ~/Code/work
-sudo unlink /work
-sudo ln -s ~/Code/work /work
+test -d /work || sudo ln -s ~/Code/work /work
 mkdir -p ~/Code/tmp
 mkdir -p ~/Software
 
