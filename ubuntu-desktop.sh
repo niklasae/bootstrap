@@ -85,6 +85,11 @@ sudo apt-get install -y parcellite
 # shutter - screenshot tool
 sudo apt-get install -y shutter
 
+# skype
+sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+sudo apt-get update
+sudo apt-get install -y skype
+
 # spotify
 sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list'
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
