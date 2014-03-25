@@ -47,10 +47,10 @@ sudo apt-get install -y supervisor
 
 # django-skel
 sudo apt-get install -y libevent-dev
-sudo apt-get install -y libpq-dev 
-sudo apt-get install -y libmemcache-dev 
-sudo apt-get install -y zlib1g-dev 
-sudo apt-get install -y libssl-dev 
+sudo apt-get install -y libpq-dev
+sudo apt-get install -y libmemcache-dev
+sudo apt-get install -y zlib1g-dev
+sudo apt-get install -y libssl-dev
 sudo apt-get install -y python-dev
 sudo apt-get install -y build-essential
 
@@ -59,6 +59,9 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y python-dev
 sudo apt-get install -y libxml2-dev
 sudo apt-get install -y libxslt1-dev
+
+# Python Image stuff for pillow
+sudo apt-get install -y libjpeg-dev
 
 # XXX - if panel indicators are missing
 sudo apt-get install -y libindicator1
