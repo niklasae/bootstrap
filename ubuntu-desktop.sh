@@ -46,6 +46,7 @@ sudo apt-get install -y ffmpeg
 wget -qO ~/bin/svtget https://github.com/mmn/svtget/raw/master/bash/svtget
 sudo chmod +x ~/bin/svtget
 
+sudo apt-get install -y libnotify-bin
 git clone https://gist.github.com/3083085.git ~/bin/dropshot_gist
 mv ~/bin/dropshot_gist/dropshot.py ~/bin/.
 sudo chmod +x ~/bin/dropshot.py
