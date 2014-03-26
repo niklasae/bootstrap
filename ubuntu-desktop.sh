@@ -46,6 +46,10 @@ sudo apt-get install -y ffmpeg
 wget -qO ~/bin/svtget https://github.com/mmn/svtget/raw/master/bash/svtget
 sudo chmod +x ~/bin/svtget
 
+git clone https://gist.github.com/3083085.git ~/bin/dropshot_gist
+mv ~/bin/dropshot_gist/dropshot.py ~/bin/.
+sudo chmod +x ~/bin/dropshot.py
+rm -rf ~/bin/dropshot_gist
 
 #
 # GUI tools and utils
@@ -151,6 +155,8 @@ sudo apt-get autoremove -y
 # End
 echo -e ${GREEN}
 echo "Do not forget to:"
+echo
+echo "Configure dropshot.py"
 echo
 echo "Check the README for more actions."
 echo
