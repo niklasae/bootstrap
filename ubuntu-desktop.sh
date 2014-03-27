@@ -41,6 +41,9 @@ sudo apt-get update
 #
 fancy_echo "Installing CLI tools and utils"
 
+# Ubuntu restriced extras (mp3, avi, mpeg, TrueType, Java, Flash, Codecs...)
+sudo apt-get install -y ubuntu-restricted-extras
+
 # Other binaries - into ~/bin
 sudo apt-get install -y ffmpeg
 wget -qO ~/bin/svtget https://github.com/mmn/svtget/raw/master/bash/svtget
