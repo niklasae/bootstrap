@@ -55,12 +55,6 @@ mv ~/bin/dropshot_gist/dropshot.py ~/bin/.
 sudo chmod +x ~/bin/dropshot.py
 rm -rf ~/bin/dropshot_gist
 
-# CLI pomodoro timer
-# Run: $ python3 ~/bin/omodoro 4-25-5-15
-git clone git@github.com:okraits/omodoro ~/bin/omodoro_git
-mv ~/bin/omodoro_git/omodoro ~/bin/.
-rm -rf ~/bin/omodoro_git
-
 
 #
 # GUI tools and utils
