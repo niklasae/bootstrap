@@ -115,6 +115,11 @@ sudo apt-get install -y spotify-client
 # synapse - application launcher
 sudo apt-get install -y synapse
 
+# tomate - pomodoro timer
+sudo apt-add-repository -y ppa:stvs/tomate
+sudo apt-get update
+sudo apt-get install -y tomate
+
 # vlc
 sudo apt-get install -y vlc
 
