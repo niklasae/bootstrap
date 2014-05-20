@@ -152,9 +152,11 @@ npm install -g bower
 npm install -g coffee-script
 npm install -g coffeelint
 npm install -g grunt-cli
+npm install -g gulp
 npm install -g js2coffee
 npm install -g jshint
 npm install -g less
+npm install -g npm-check-updates
 # npm:s for testing
 npm install -g phantomjs
 npm install -g casperjs
