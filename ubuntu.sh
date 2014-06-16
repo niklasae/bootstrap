@@ -157,6 +157,7 @@ npm install -g js2coffee
 npm install -g jshint
 npm install -g less
 npm install -g npm-check-updates
+npm install -g ripple-emulator
 # npm:s for testing
 npm install -g phantomjs
 npm install -g casperjs
