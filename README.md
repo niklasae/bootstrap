@@ -28,6 +28,7 @@ Install and setup scripts for my boxes
 * Install Chrome
 * Install DbVisulizer (8?)
 * Install Dropbox + run setup
+* Install [Google Web Designer](https://www.google.com/webdesigner)
 * Install [IE](http://www.modern.ie/en-us/virtualization-tools)
 * Install [ngrok](https://ngrok.com)
 * Install [redis-cli](http://redis.io/topics/quickstart)
