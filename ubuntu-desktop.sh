@@ -70,7 +70,10 @@ sudo apt-get install -y calibre
 # chromium
 sudo apt-get install -y chromium-browser
 
-# keepassx 
+# dragondisk
+sudo apt-get install -y dragondisk
+
+# keepassx
 sudo apt-get install -y keepassx
 
 # gimp
