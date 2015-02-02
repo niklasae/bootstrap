@@ -45,7 +45,10 @@ fancy_echo "Installing CLI tools and utils"
 sudo apt-get install -y ubuntu-restricted-extras
 
 # Enable HDMI audio output
-sudo apt-get install pavucontrol
+sudo apt-get install -y pavucontrol
+
+# Clipboard cli
+sudo apt-get install -y xsel
 
 # Other binaries - into ~/bin
 sudo apt-get install -y ffmpeg
