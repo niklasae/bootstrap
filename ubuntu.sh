@@ -81,6 +81,9 @@ sudo apt-get install -y at
 # cURL
 sudo apt-get install -y curl
 
+# docker
+sudo apt-get install -y docker.io
+
 # git
 sudo apt-get install -y git
 
