@@ -178,6 +178,7 @@ sudo apt-get install -y libmysqlclient-dev  # MySQL lib for ORM
 wget -qO- http://python-distribute.org/distribute_setup.py | sudo python
 sudo easy_install pip
 sudo pip install -U pip
+sudo pip install -U docker-compose
 sudo pip install -U fabric
 sudo pip install -U virtualenv
 sudo pip install -U virtualenvwrapper
