@@ -51,7 +51,7 @@ sudo apt-get install -y pavucontrol
 sudo apt-get install -y xsel
 
 # Other binaries - into ~/bin
-sudo apt-get install -y ffmpeg
+sudo apt-get install -y libav-tools
 wget -qO ~/bin/svtget https://github.com/mmn/svtget/raw/master/bash/svtget
 sudo chmod +x ~/bin/svtget
 
