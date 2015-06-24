@@ -79,6 +79,11 @@ sudo apt-get install -y dragondisk
 # keepassx
 sudo apt-get install -y keepassx
 
+# geary - email client
+sudo add-apt-repository -y ppa:yorba/ppa
+sudo apt-get update
+sudo apt-get install -y geary
+
 # gimp
 sudo apt-get install -y gimp
 
@@ -105,7 +110,7 @@ sudo apt-get install -y clipit
 sudo apt-get install -y shutter
 
 # skype
-sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+sudo add-apt-repository -y "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
 sudo apt-get update
 sudo apt-get install -y skype
 
