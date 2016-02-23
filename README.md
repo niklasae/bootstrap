@@ -5,7 +5,9 @@ Install and setup scripts for my boxes
 
 ## Setting up encrypted ssh keys
 
-	# Generate the key
+	# Generate the key ([newish](http://www.tedunangst.com/flak/post/new-openssh-key-format-and-bcrypt-pbkdf))
+	$ ssh-keygen -o -a 64
+	# Generate the key (old)
 	$ ssh-keygen -t rsa
 	$ openssl pkcs8 -topk8 -v2 des3 -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa_enc
 	$ rm ~/.ssh/id_rsa
