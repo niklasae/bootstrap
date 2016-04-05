@@ -100,6 +100,9 @@ sudo sh -c "echo niklas@jobylon.com > /root/.forward"  # root forward
 # nfs
 sudo apt-get install -y nfs-kernel-server nfs-common portmap
 
+# pdftk - PDF tools
+sudo apt-get install -y pdftk
+
 # tmate
 sudo apt-get install -y python-software-properties
 sudo add-apt-repository -y ppa:nviennot/tmate
