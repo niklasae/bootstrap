@@ -209,6 +209,7 @@ source ~/.rvm/scripts/rvm
 # heroku - toolbelt and accounts
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 heroku plugins:install git://github.com/ddollar/heroku-accounts.git
+heroku plugins:install heroku-pipelines
 
 
 #
