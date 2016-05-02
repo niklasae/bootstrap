@@ -178,6 +178,7 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y libevent-dev  # asynchronous IO
 sudo apt-get install -y libpq-dev  # PostgreSQL lib for ORM
 sudo apt-get install -y libmysqlclient-dev  # MySQL lib for ORM
+sudo apt-get install -y libxml2 libxslt1-dev  # lxml
 wget -qO- http://python-distribute.org/distribute_setup.py | sudo python
 sudo easy_install pip
 sudo pip install -U pip
