@@ -124,6 +124,9 @@ sudo apt-get install -y weechat
 # xclip - used with tmux copy/paste
 sudo apt-get install -y xclip
 
+# xmllint
+sudo apt-get install -y libxml2-utils
+
 # zsh
 sudo apt-get install -y zsh
 chsh -s `which zsh`
