@@ -182,8 +182,6 @@ sudo apt-get install -y libevent-dev  # asynchronous IO
 sudo apt-get install -y libpq-dev  # PostgreSQL lib for ORM
 sudo apt-get install -y libmysqlclient-dev  # MySQL lib for ORM
 sudo apt-get install -y libxml2 libxslt1-dev  # lxml
-wget -qO- http://python-distribute.org/distribute_setup.py | sudo python
-sudo easy_install pip
 sudo pip install -U pip
 sudo pip install -U docker-compose
 sudo pip install -U fabric
@@ -192,27 +190,9 @@ sudo pip install -U virtualenvwrapper
 # python autoenv - installing using pip didn't work too well
 git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
 
-# ruby - dependencies and rvm
-sudo apt-get install -y libreadline6-dev
-sudo apt-get install -y zlib1g-dev
-sudo apt-get install -y libssl-dev
-sudo apt-get install -y libyaml-dev
-sudo apt-get install -y libsqlite3-dev
-sudo apt-get install -y sqlite3
-sudo apt-get install -y autoconf
-sudo apt-get install -y libgdbm-dev
-sudo apt-get install -y libncurses5-dev
-sudo apt-get install -y automake
-sudo apt-get install -y libtool
-sudo apt-get install -y bison
-sudo apt-get install -y libffi-dev
-curl -L https://get.rvm.io | bash -s stable --ruby
-source ~/.rvm/scripts/rvm
-
 
 # heroku - toolbelt and accounts
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-heroku plugins:install git://github.com/ddollar/heroku-accounts.git
 heroku plugins:install heroku-pipelines
 
 
