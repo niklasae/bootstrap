@@ -48,12 +48,13 @@ sudo apt-get install -y ubuntu-restricted-extras
 sudo apt-get install -y pavucontrol
 
 # Clipboard cli
+sudo apt-get install -y xclip
 sudo apt-get install -y xsel
 
 # Other binaries - into ~/bin
-sudo apt-get install -y libav-tools
-wget -qO ~/bin/svtget https://github.com/mmn/svtget/raw/master/bash/svtget
-sudo chmod +x ~/bin/svtget
+#sudo apt-get install -y libav-tools
+#wget -qO ~/bin/svtget https://github.com/mmn/svtget/raw/master/bash/svtget
+#sudo chmod +x ~/bin/svtget
 
 sudo apt-get install -y libnotify-bin
 git clone https://gist.github.com/3083085.git ~/bin/dropshot_gist
@@ -74,15 +75,15 @@ sudo apt-get install -y calibre
 sudo apt-get install -y chromium-browser
 
 # dragondisk
-sudo apt-get install -y dragondisk
+#sudo apt-get install -y dragondisk
 
 # keepassx
 sudo apt-get install -y keepassx
 
 # geary - email client
-sudo add-apt-repository -y ppa:yorba/ppa
-sudo apt-get update
-sudo apt-get install -y geary
+#sudo add-apt-repository -y ppa:yorba/ppa
+#sudo apt-get update
+#sudo apt-get install -y geary
 
 # gimp
 sudo apt-get install -y gimp
@@ -118,15 +119,21 @@ sudo apt-get install -y skype
 sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list'
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 sudo apt-get update
-sudo apt-get install -y spotify-client
+sudo apt-get install -y spotify-client --force-yes
 
 # synapse - application launcher
-sudo apt-get install -y synapse
+#sudo apt-add-repository -y ppa:synapse-core/testing
+#sudo apt-get update
+#sudo apt-get install -y synapse
+# synapse alternativ Albert launcher - albertlauncher.github.io
+sudo add-apt-repository -y ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install -y albert
 
 # tomate - pomodoro timer
-sudo apt-add-repository -y ppa:stvs/tomate
-sudo apt-get update
-sudo apt-get install -y tomate
+#sudo apt-add-repository -y ppa:stvs/tomate
+#sudo apt-get update
+#sudo apt-get install -y tomate
 
 # vlc
 sudo apt-get install -y vlc
