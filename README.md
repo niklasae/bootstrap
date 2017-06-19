@@ -32,11 +32,11 @@ Install and setup scripts for my boxes
 
 
 ## Setup directory and clone bootstrap and dotfiles repo
-```
+
     $ mkdir -p ~/Code/niklasae
+    $ cd ~/Code/niklasae
     $ git clone git@github.com:niklasae/bootstrap
     $ git clone git@github.com:niklasae/dotfiles
-```
 
 
 ## The following packages has to be installed manually
