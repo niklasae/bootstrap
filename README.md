@@ -7,22 +7,36 @@ Install and setup scripts for my boxes
 
 	# Generate the key - [newish](http://www.tedunangst.com/flak/post/new-openssh-key-format-and-bcrypt-pbkdf)
 	$ ssh-keygen -o -a 64
-	# Generate the key (old)
+	$ mv ~/.ssh/id_rsa ~/.ssh/id_rsa_enc
+	$ mv ~/.ssh/id_rsa.pub ~/.ssh/pub/.
+
+	# Or generate the key the (old) way
 	$ ssh-keygen -t rsa
 	$ openssl pkcs8 -topk8 -v2 des3 -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa_enc
 	$ rm ~/.ssh/id_rsa
 	$ mkdir -p ~/.ssh/pub
 	$ mv ~/.ssh/id_rsa.pub ~/.ssh/pub/.
 	$ chmod 600 ~/.ssh/id_rsa_enc
-	$ ssh-add ~/.ssh/id_rsa_enc
 
-	# Put on sites
+	# Put public key on sites
 	$ sudo apt-get install -y xclip
 	$ xclip -sel clip < ~/.ssh/pub/id_rsa.pub
+
+	# Add private key to authentication agent
+	$ ssh-add ~/.ssh/id_rsa_enc
 
 	# Test
 	$ ssh -T git@github.com
 	$ ssh -T git@bitbucket.com
+
+
+
+## Setup directory and clone bootstrap and dotfiles repo
+```
+    $ mkdir -p ~/Code/niklasae
+    $ git clone git@github.com:niklasae/bootstrap
+    $ git clone git@github.com:niklasae/dotfiles
+```
 
 
 ## The following packages has to be installed manually
