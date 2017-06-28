@@ -51,6 +51,9 @@ sudo apt-get install -y pavucontrol
 sudo apt-get install -y xclip
 sudo apt-get install -y xsel
 
+# Redshift adjusts the color temperature of the screen
+sudo apt-get install -y redshift redshift-gtk
+
 # Other binaries - into ~/bin
 #sudo apt-get install -y libav-tools
 #wget -qO ~/bin/svtget https://github.com/mmn/svtget/raw/master/bash/svtget
