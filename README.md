@@ -56,8 +56,8 @@ Install and setup scripts for my boxes
 
 ## The following packages has to be configured manually
 
-* Configure Parcellite
-* Configure Synapse
+* Configure ClipIt/Parcellite
+* Configure Albert/Synapse
 
 
 ## Other
