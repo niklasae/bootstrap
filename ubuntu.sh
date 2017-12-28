@@ -93,9 +93,9 @@ sudo apt-get install -y htop
 # inotify
 sudo apt-get install -y inotify-tools
 
-# mutt - email
-sudo apt-get install -y mutt
-sudo sh -c "echo niklas@jobylon.com > /root/.forward"  # root forward
+## mutt - email
+#sudo apt-get install -y mutt
+#sudo sh -c "echo niklas@jobylon.com > /root/.forward"  # root forward
 
 # nfs
 sudo apt-get install -y nfs-kernel-server nfs-common portmap
