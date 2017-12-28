@@ -129,9 +129,13 @@ sudo apt-get install -y spotify-client --force-yes
 #sudo apt-get update
 #sudo apt-get install -y synapse
 # synapse alternativ Albert launcher - albertlauncher.github.io
-sudo add-apt-repository -y ppa:nilarimogard/webupd8
+#sudo add-apt-repository -y ppa:nilarimogard/webupd8
+#sudo apt-get update
+#sudo apt-get install -y albert
+# synapse alternativ Ulauncher - https://ulauncher.io
+sudo add-apt-repository -y ppa:agornostal/ulauncher
 sudo apt-get update
-sudo apt-get install -y albert
+sudo apt-get install -y ulauncher
 
 # tomate - pomodoro timer
 #sudo apt-add-repository -y ppa:stvs/tomate
