@@ -118,8 +118,8 @@ sudo apt-get install -y tree
 # vim
 sudo apt-get install -y vim
 
-# weechat - IRC
-sudo apt-get install -y weechat
+## weechat - IRC
+#sudo apt-get install -y weechat
 
 # xclip - used with tmux copy/paste
 sudo apt-get install -y xclip
