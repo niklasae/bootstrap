@@ -105,7 +105,7 @@ sudo apt-get install -y pdftk
 
 # tmate
 sudo apt-get install -y python-software-properties
-sudo add-apt-repository -y ppa:nviennot/tmate
+sudo add-apt-repository -y ppa:tmate.io/archive
 sudo apt-get update
 sudo apt-get install -y tmate
 
