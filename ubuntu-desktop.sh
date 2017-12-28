@@ -146,8 +146,6 @@ sudo apt-get install -y ulauncher
 sudo apt-get install -y vlc
 
 # zeal - offline API document browser inspired by Dash (OS X app)
-sudo add-apt-repository -y ppa:jerzy-kozera/zeal-ppa
-sudo apt-get update
 sudo apt-get install -y zeal
 
 
