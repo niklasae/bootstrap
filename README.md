@@ -49,6 +49,7 @@ Install and setup scripts for my boxes
 * Install [ngrok](https://ngrok.com)
 * Install [redis-cli](http://redis.io/topics/quickstart)
 * Install RescueTime
+* Install Skype
 * Install Vagrant
 * Install Valentina Studio (VStudio) + import bookmarks
 * Install Virtualbox
