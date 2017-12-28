@@ -153,7 +153,7 @@ cd $current_dir
 # node.js - nvm, latest as default and basic packages
 git clone git://github.com/creationix/nvm.git ~/.nvm
 source ~/.nvm/nvm.sh
-node_version=$(wget -qO- http://nodejs.org | grep "Current Version" | grep -o '[0-9\.]*')
+node_version=$(wget -qO- http://nodejs.org | grep "LTS" | grep -o '[0-9]\+\.[0-9\.]*' | head -n 1)
 fancy_echo "Setting up node.js version (NVM) - "$node_version
 nvm install $node_version
 nvm alias default $node_version
