@@ -112,6 +112,8 @@ sudo apt-get install -y clipit
 
 # shutter - screenshot tool
 sudo apt-get install -y shutter
+# Let's try flameshot instead of shutter...
+# sudo apt-get install -y flameshot
 
 ## skype
 #sudo add-apt-repository -y "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
